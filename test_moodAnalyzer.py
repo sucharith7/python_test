@@ -36,3 +36,16 @@ class TestMoodAnalyzer:
 		moodAnalyzer1= moodAnalyzerFactory.createObject("i am in happy mood")
 		mood=moodAnalyzer1.analyzeMood()
 		assert mood == "HAPPY"
+
+
+	def givenMoodAnalyzerclass_whenProper_shouldReturnObject():
+		#moodAnalyzerFactory=MoodAnalyzerFactory()
+		Moodanalyzerx= MoodAnalyzerFactory.createMoodAnalyzer("i am in happy mood")
+		Moodanalyzery=MoodAnalyzer1("i am in happy mood")
+		assert Moodanalyzerx==Moodanalyzery
+
+
+	def test_givenNone_thencalled_defaultConstructor_ReturnObject(self):
+		MoodAnalyzerx= MoodAnalyzerFactory.createMoodAnalyzer()
+		MoodAnalyzery=MoodAnalyzer1()
+		assert MoodAnalyzerx == MoodAnalyzery
