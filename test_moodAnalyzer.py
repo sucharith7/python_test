@@ -11,3 +11,9 @@ class TestMoodAnalyzer:
 		moodAnalyzer=MoodAnalyzer()
 		mood=moodAnalyzer.analyzeMood("this is happy message")
 		assert mood=="HAPPY"
+
+
+	def test_GivenMood_ContaineNone_ReturnHappy(self):
+		moodAnalyzer=MoodAnalyzer()
+		mood=moodAnalyzer.analyzeMood("None")
+		assert mood=="HAPPY"
