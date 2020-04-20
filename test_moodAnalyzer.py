@@ -1,5 +1,6 @@
 import pytest
 from MoodAnalyzer import MoodAnalyzer
+from CustomException import CustomException
 class TestMoodAnalyzer:
 	def test_GivenMood_ContainSad_ReturnSad(self):
 		moodAnalyzer=MoodAnalyzer()
