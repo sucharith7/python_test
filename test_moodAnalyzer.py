@@ -1,5 +1,8 @@
 import pytest
+from MoodAnalyzer1 import MoodAnalyzer1
 from MoodAnalyzer import MoodAnalyzer
+from CustomException import CustomException
+from MoodAnalyzerFactory import MoodAnalyzerFactory
 class TestMoodAnalyzer:
 	def test_GivenMood_ContainSad_ReturnSad(self):
 		moodAnalyzer=MoodAnalyzer()
@@ -26,3 +29,10 @@ class TestMoodAnalyzer:
 			
 		except Exception as exception:
 			assert exception.message == "please enter a proper message"
+
+
+	def test_givenMoodAnalyzerclass_whenProper_shouldReturnObject(self):
+		moodAnalyzerFactory=MoodAnalyzerFactory() 
+		moodAnalyzer1= moodAnalyzerFactory.createObject("i am in happy mood")
+		mood=moodAnalyzer1.analyzeMood()
+		assert mood == "HAPPY"
