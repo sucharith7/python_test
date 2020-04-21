@@ -7,6 +7,4 @@ class MoodAnalyzer:
 			else:
 				return "HAPPY"
 		except Exception as exception:
-		 	#return "HAPPY"
-		 	#print("hello")
 			raise CustomException ("please enter a proper message")
