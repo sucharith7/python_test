@@ -23,7 +23,7 @@ class TestMoodAnalyzer:
 	def test_GivenMood_ContainedNone_ReturnCustomException(self):
 		try:
 			moodAnalyzer=MoodAnalyzer()
-			mood=moodAnalyzer.analyzeMood(None)
+			mood=moodAnalyzer.analyzeMood("None")
 			
 		except Exception as exception:
 			assert exception.message == "please enter a proper message"
