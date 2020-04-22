@@ -1,5 +1,5 @@
 from CustomException import CustomException
-class MoodAnalyzer1:
+class MoodAnalyzerr:
 	def __init__(self,message=None):
 		self.message=message
 
