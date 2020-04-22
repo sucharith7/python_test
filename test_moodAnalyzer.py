@@ -1,5 +1,5 @@
 import pytest
-from MoodAnalyzer1 import MoodAnalyzer1
+from MoodAnalyzer1 import MoodAnalyzerr
 from MoodAnalyzer import MoodAnalyzer
 from CustomException import CustomException
 from MoodAnalyzerFactory import MoodAnalyzerFactory
@@ -33,6 +33,6 @@ class TestMoodAnalyzer:
 
 	def test_givenMoodAnalyzerclass_whenProper_shouldReturnObject(self):
 		moodAnalyzerFactory=MoodAnalyzerFactory() 
-		moodAnalyzer1= moodAnalyzerFactory.createObject("i am in happy mood")
-		mood=moodAnalyzer1.analyzeMood()
+		moodAnalyzerr= moodAnalyzerFactory.createObject("i am in happy mood")
+		mood=moodAnalyzerr.analyzeMood()
 		assert mood == "HAPPY"
